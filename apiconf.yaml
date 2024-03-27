@@ -1,0 +1,55 @@
+swagger: '2.0'
+info:
+  title: Arithmetic Operations API
+  description: API for performing basic arithmetic operations
+  version: '1.0'
+host: 'mope-212-0bav3v1ag3cbq.apigateway.apachehw2.cloud.goog'
+schemes:
+  - https
+produces:
+  - application/json
+paths:
+  /add:
+    get:
+      summary: Adds X and Y
+      operationId: addXYFunction
+      responses:
+        '200':
+          description: Success response
+          schema:
+            type: object
+      x-google-backend:
+        address: https://us-central1-apachehw2.cloudfunctions.net/function-1
+  /sub:
+    get:
+      summary: Subtracts Y from X
+      operationId: subXYFunction
+      responses:
+        '200':
+          description: Success response
+          schema:
+            type: object
+      x-google-backend:
+        address: https://us-central1-apachehw2.cloudfunctions.net/function-2
+  /div:
+    get:
+      summary: Divides X by Y
+      operationId: divXYFunction
+      responses:
+        '200':
+          description: Success response
+          schema:
+            type: object
+      x-google-backend:
+        address: https://us-central1-apachehw2.cloudfunctions.net/function-3
+  /mul:
+    get:
+      summary: Multiplies X and Y
+      operationId: mulXYFunction
+      responses:
+        '200':
+          description: Success response
+          schema:
+            type: object
+      x-google-backend:
+        address: https://us-central1-apachehw2.cloudfunctions.net/function-5
